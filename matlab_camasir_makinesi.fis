@@ -1,0 +1,115 @@
+[System]
+Name='ensonhaali'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=5
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Camaşır_hassaslık'
+Range=[0 100]
+NumMFs=3
+MF1='Sağlam':'trimf',[-41.67 0 41.67]
+MF2='Orta':'trimf',[8.333 50 91.67]
+MF3='Hassas':'trimf',[58.33 100 141.7]
+
+[Input2]
+Name='Camaşır_kirliliği'
+Range=[0 100]
+NumMFs=3
+MF1='Az_kirli':'trimf',[-41.67 0 41.67]
+MF2='Orta_Kirli':'trimf',[8.333 50 91.67]
+MF3='Çok_kirli':'trimf',[58.33 100 141.7]
+
+[Input3]
+Name='Camaşır_miktarı'
+Range=[0 100]
+NumMFs=3
+MF1='Az':'trimf',[-41.67 0 41.67]
+MF2='Orta':'trimf',[8.333 50 91.67]
+MF3='Çok':'trimf',[58.33 100 141.7]
+
+[Output1]
+Name='Devir'
+Range=[0 1000]
+NumMFs=5
+MF1='hassas':'trimf',[-250 0 250]
+MF2='normal_hassas':'trimf',[0 250 500]
+MF3='orta':'trimf',[250 500 750]
+MF4='normal_güçlü':'trimf',[500 750 1000]
+MF5='güçlü':'trimf',[750 1000 1250]
+
+[Output2]
+Name='Süre'
+Range=[0 2]
+NumMFs=5
+MF1='kısa':'trimf',[-0.5 0 0.5]
+MF2='normal_kısa':'trimf',[0 0.5 1]
+MF3='orta':'trimf',[0.5 1 1.5]
+MF4='normal_uzun':'trimf',[1 1.5 2]
+MF5='uzun':'trimf',[1.5 2 2.5]
+
+[Output3]
+Name='Su_tüketim'
+Range=[0 1]
+NumMFs=5
+MF1='az_tüketim':'trimf',[-0.25 0 0.25]
+MF2='normal_az_tüketim':'trimf',[0 0.25 0.5]
+MF3='orta_tüketim':'trimf',[0.25 0.5 0.75]
+MF4='normal_çok_tüketim':'trimf',[0.5 0.75 1]
+MF5='çok_tüketim':'trimf',[0.75 1 1.25]
+
+[Output4]
+Name='Deterjan_tüketim'
+Range=[0 1]
+NumMFs=5
+MF1='az-deterjan_tüketim':'trimf',[-0.25 0 0.25]
+MF2='normal_az-deterjan_tüketim':'trimf',[0 0.25 0.5]
+MF3='orta-deterjan_tüketim':'trimf',[0.25 0.5 0.75]
+MF4='çok_deterjan_tüketim':'trimf',[0.5 0.75 1]
+MF5='normal_çok_deterjan_tüketim':'trimf',[0.75 1 1.25]
+
+[Output5]
+Name='sıcaklık'
+Range=[0 1]
+NumMFs=5
+MF1='az_sıcaklık':'trimf',[-0.25 0 0.25]
+MF2='normal_az_sıcaklık':'trimf',[0 0.25 0.5]
+MF3='orta_sıcaklık':'trimf',[0.25 0.5 0.75]
+MF4='çok_sıcaklık':'trimf',[0.5 0.75 1]
+MF5='normal_çok_sıcaklık':'trimf',[0.75 1 1.25]
+
+[Rules]
+3 1 1, 1 1 1 1 1 (1) : 1
+3 1 2, 1 2 1 1 1 (1) : 1
+3 1 3, 2 2 2 1 1 (1) : 1
+3 2 1, 1 2 2 1 1 (1) : 1
+3 2 2, 3 2 3 2 1 (1) : 1
+3 2 3, 3 3 4 3 1 (1) : 1
+3 3 1, 2 2 2 3 1 (1) : 1
+3 3 2, 3 3 3 3 1 (1) : 1
+3 3 3, 4 0 4 5 1 (1) : 1
+2 1 1, 2 2 2 2 1 (1) : 1
+2 1 2, 3 3 3 3 1 (1) : 1
+2 1 3, 5 4 4 5 5 (1) : 1
+2 2 1, 2 2 2 2 2 (1) : 1
+2 2 2, 3 3 3 3 2 (1) : 1
+2 2 3, 4 4 4 5 2 (1) : 1
+2 3 1, 3 3 3 3 2 (1) : 1
+2 3 2, 4 4 4 5 5 (1) : 1
+2 3 3, 5 5 5 4 4 (1) : 1
+1 1 1, 3 3 3 3 3 (1) : 1
+1 1 2, 3 3 3 3 3 (1) : 1
+1 1 3, 3 4 4 4 3 (1) : 1
+1 2 1, 3 3 3 3 3 (1) : 1
+1 2 2, 4 4 4 5 4 (1) : 1
+1 2 3, 5 5 5 5 5 (1) : 1
+1 3 1, 3 3 3 3 3 (1) : 1
+1 3 2, 4 4 4 5 5 (1) : 1
+1 3 3, 5 5 5 4 4 (1) : 1
