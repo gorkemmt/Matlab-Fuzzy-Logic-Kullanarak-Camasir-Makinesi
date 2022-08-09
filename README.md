@@ -5,12 +5,13 @@
 # Çalışma İle İlgili Görseller
 
 # Girdi Değerleri:
-
+![girdi](https://user-images.githubusercontent.com/84309668/183650417-3bda0b12-f700-4404-bed6-7b7fc72cc88c.PNG)
 
 # Kurallar:
-
+![kurallar](https://user-images.githubusercontent.com/84309668/183650441-c52b7422-501e-42d1-91bc-1186eab84545.PNG)
 
 # Çıktı değerleri:
+![çıktılar](https://user-images.githubusercontent.com/84309668/183650447-e231df00-b8f6-4fc2-b6d1-1e1471ae3ac0.PNG)
 
 
 
